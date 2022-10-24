@@ -6,7 +6,7 @@ function sumArg(...arg){
     }
     return sumAll 
 }
-// console.log(`Сумма всех аргументов ${sumArg(12, 10, 10)}`)
+console.log(`Сумма всех аргументов ${sumArg(12, 10, 10)}`)
 
 // 2)Створити функцію яка отримує від користувача день народження,місяць, рік і повертає рік народження і якщо сьогодні день народження користувача то вивести привітання
 
@@ -21,7 +21,7 @@ function checkBirthday(){
     return(`Год рождения ${mydate.getUTCFullYear()}`)
     }
 }
-// console.log(checkBirthday())
+console.log(checkBirthday())
 
 // 3) Створити функцію яка з массиву вибирає всі булеві значення
 const sort = [true, 'false', 111, -0, 'true', false, {a:false}, [true, 'false']];
@@ -36,39 +36,27 @@ function bool(arr){
     return(newARR)
 }
 
-// console.log(bool(sort))
+console.log(bool(sort))
 
 // 4) Створити функцію яка повертає сторіччя, функція отримує рік
 
-// let inputYear = new Date(parseInt(prompt('введите год для перевода в век',)))
+let inputYear = new Date(parseInt(prompt('введите год для перевода в век',)))
     
 function century(year){
     return Math.floor((year-1)/100) + 1;
 }
 
-// console.log(`Вы ввели ${century(inputYear)} век`);
+console.log(`Вы ввели ${century(inputYear)} век`);
 
 // 5) Створити функцію яка повертає скільки днів в цьому місяці а також в наступному  ( В цьому місяці 30 днів в наступному 31 )
 
 
-// date = new Date()
-// let month = date.getMonth();
-// let year = date.getFullYear();
-// var getDaysInMonth = function(month,year) {
 
-//     return `Дней в текущем месяце: ${new Date(year, month, 0).getDate()}, В следующем месяце будет ${new Date(year, month+1, 0).getDate()} дней`;
-//    };
+let daysInMonth = function(date){
+    let month = date.getMonth();
+    let year = date.getFullYear();
+    return `Дней в текущем месяце: ${new Date(year, month, 0).getDate()}, В следующем месяце будет ${new Date(year, month+1, 0).getDate()} дней`;
+   };
+date = new Date()
+console.log(daysInMonth(date))
 
-// console.log(getDaysInMonth(month, year))
-
-
-
-function getBoolean(arr) {
-    let result = [];
-    for (let i of arr) {
-        if (typeof i === 'boolean') result.push(i);
-    }
-    return result;
-}
-
-console.log(getBoolean(sort))
