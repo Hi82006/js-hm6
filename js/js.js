@@ -55,7 +55,7 @@ console.log(`Вы ввели ${century(inputYear)} век`);
 let daysInMonth = function(date){
     let month = date.getMonth();
     let year = date.getFullYear();
-    return `Дней в текущем месяце: ${new Date(year, month, 0).getDate()}, В следующем месяце будет ${new Date(year, month+1, 0).getDate()} дней`;
+    return `Дней в текущем месяце: ${new Date(year, month-1, 0).getDate()}, В следующем месяце будет ${new Date(year, month, 0).getDate()} дней`;
    };
 date = new Date()
 console.log(daysInMonth(date))
